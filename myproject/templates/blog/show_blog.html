@@ -1,0 +1,26 @@
+<a href="/blog/creat/">Создать</a>
+        <table >
+			<thead>
+				<tr>
+					<th>Заголовок</th>
+					<th>Содержание</th>
+					<th>Дата создания</th>
+               </tr>
+	       </thead>
+	       <tbody>
+
+
+    {% for b in blog_list %}
+       
+					<tr>
+						<td><a href="/blog/{{ b.id }}/">{{ b.title }}</a></td>
+						<td>{{ b.content }}</td>
+						<td>{{ b.creat_date }}</td>
+					</tr>
+			
+
+    {% endfor %}
+        </tbody>
+        </table>
+
+
